@@ -1,12 +1,12 @@
-export default function SideBar() {
+import Button from "./Button.jsx";
+
+export default function SideBar({ onStartAddProject }) {
   return (
-    <section className="fixed flex flex-col items-center gap-4 my-4 bg-stone-800 w-1/4 h-full p-8 rounded">
-      <label className="text-sm font-bold uppercase text-white">
+    <aside className="w-1/3 px-8 py-16 bg-stone-900 text-stone-50 md:w-72 rounded-r-xl">
+      <h2 className="mb-8 font-bold uppercase md:text-xl text-stone-200">
         Your Projects
-      </label>
-      <button className="px-4 py-2 text-xs font-light md:text-base rounded-md bg-stone-500 text-stone-100 hover:bg-stone-600 hover:text-stone-100">
-        + Add Project
-      </button>
-    </section>
+      </h2>
+      <Button onClick={onStartAddProject}>+ Add Project</Button>
+    </aside>
   );
 }
